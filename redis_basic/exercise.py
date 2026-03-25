@@ -2,7 +2,6 @@
 """
 Module for Redis cache.
 """
-import redis
 import uuid
 from typing import Union
 
@@ -15,6 +14,7 @@ class Cache:
         Stores instance of the Redis client as a private variable named _redis
         and flushes the instance using flushdb.
         """
+        import redis
         self._redis = redis.Redis()
         self._redis.flushdb()
 
